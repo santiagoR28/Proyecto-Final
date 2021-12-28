@@ -3,9 +3,18 @@
   padding: 0;
 }
 
+//Variables
+
+$tipografia: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+$texto: 15px;
+$texto-agentes: 14px;
+$texto-responsive: 6px;
+
 /* cabecera */
+
 .cabecera {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   height: 50px;
   padding: 5px;
   width: 100%;
@@ -42,13 +51,13 @@ header div nav a:hover {
 }
 
 /* header */
-#Header,
-#headerMDJ,
-#HeaderAgentes,
-#HeaderM {
+
+#Header {
   height: 700px;
+
   margin-top: 50px;
   margin-bottom: 10px;
+
   background-image: url("https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Wallpaper-Boys-Dark-Display.jpg");
   background-size: cover;
   background-position: center center;
@@ -56,6 +65,7 @@ header div nav a:hover {
 }
 
 /* section y main index */
+
 .flexSection {
   display: flex;
   flex-direction: column;
@@ -68,19 +78,25 @@ header div nav a:hover {
   margin-right: 50px;
 }
 
-.titulos,
-main h1 {
-  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+.titulos {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   color: white;
   text-align: center;
 }
 
-.textos,
-.tipografia {
+main h1 {
+  @extend .titulos;
+}
+
+.textos {
   text-align: center;
-  font-size: 15px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: $texto;
+  font-family: $tipografia;
 }
 
 #padreFlex {
@@ -90,8 +106,7 @@ main h1 {
   margin-bottom: 20px;
 }
 
-.hijos,
-.hijosAgentes {
+.hijos {
   width: 300px;
   border: gray 1px solid;
   text-align: center;
@@ -133,11 +148,13 @@ main h1 {
 }
 
 /* footer */
+
 footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
   background-color: black;
   margin-top: 20px;
 }
@@ -156,7 +173,9 @@ footer {
 }
 
 /* mapas */
+
 #HeaderM {
+  @extend #Header;
   background-image: url("https://media.vandal.net/i/1280x720/5-2020/20205516574393_1.jpg.webp");
 }
 
@@ -165,13 +184,15 @@ footer {
 }
 
 .nombreMapas {
-  color: #6e6eff;
+  color: rgb(110, 110, 255);
   margin-top: 5px;
   text-align: center;
 }
 
 /* Agentes */
+
 #HeaderAgentes {
+  @extend #Header;
   height: 800px;
   background-image: url("https://media.vandal.net/master/5-2020/20205412405084_1.jpg");
 }
@@ -179,124 +200,129 @@ footer {
 #flexAgentes {
   display: flex;
   flex-wrap: wrap;
+
   justify-content: center;
 }
 
 .hijosAgentes {
+  @extend .hijos;
+
   border: 1px solid black;
   width: 500px;
   height: 500px;
-  margin: 4px;
-}
-.hijosAgentes .agentes {
-  display: none;
-}
-.hijosAgentes .agentes--letraChica {
-  display: none;
+  margin: 10px;
+
+  .agentes {
+    display: none;
+  }
+
+  .agentes--letraChica {
+    display: none;
+  }
 }
 
 .hijosAgentes:hover {
   background-image: none;
   background-color: #e5e1dc;
-}
-.hijosAgentes:hover .agentes {
-  display: block;
-  font-size: 14px;
-}
-.hijosAgentes:hover .agentes--letraChica {
-  display: block;
-  font-size: 12px;
+
+  .agentes {
+    display: block;
+    font-size: 14px;
+  }
+  .agentes--letraChica {
+    display: block;
+    font-size: 12px;
+  }
 }
 
-.jett,
-.chamber,
-.kayo,
-.astra,
-.yoru,
-.skye,
-.killjoy,
-.reyna,
-.cypher,
-.viper,
-.sova,
-.sage,
-.phoenix,
-.Brimstone,
-.omen,
-.breach,
-.raze {
+.jett {
   background-image: url("https://horapiko.com/wp-content/uploads/2021/01/Jugador-de-Valorant-muestra-el-increible-truco-de-Jett-en.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .raze {
+  @extend .jett;
   background-image: url("https://areajugones.sport.es/wp-content/uploads/2020/06/Valorant-imagen-6.jpg");
 }
-
 .breach {
+  @extend .jett;
   background-image: url("https://www.techgames.com.mx/wp-content/uploads/2020/06/VALORANT-agente-BREACH.jpg");
 }
-
 .omen {
+  @extend .jett;
   background-image: url("https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2021/2/16/bm7cdtb6xdhcibbweehq/valorant-omen");
 }
 
 .Brimstone {
+  @extend .jett;
   background-image: url("https://img.redbull.com/images/c_crop,w_3840,h_1920,x_0,y_0,f_auto,q_auto/c_scale,w_1200/redbullcom/2021/6/8/rqvcvtp5w9cxuuv3o6no/valorant-agent-brimstone");
 }
 
 .phoenix {
+  @extend .jett;
   background-image: url("https://p4.wallpaperbetter.com/wallpaper/921/75/603/valorant-phoenix-valorant-riot-games-hd-wallpaper-preview.jpg");
 }
 
 .sage {
+  @extend .jett;
   background-image: url("https://images7.alphacoders.com/114/1149436.jpg");
 }
 
 .sova {
+  @extend .jett;
   background-image: url("https://p4.wallpaperbetter.com/wallpaper/531/112/977/valorant-sova-valorant-hd-wallpaper-preview.jpg");
 }
 
 .viper {
+  @extend .jett;
   background-image: url("https://www.esportmaniacos.com/wp-content/uploads/2021/05/VALORANT_Viper_Light-780x470.jpg");
 }
 
 .cypher {
+  @extend .jett;
   background-image: url("https://mocah.org/thumbs/344897-Cypher-Valorant-Video-Game.jpg");
 }
 
 .reyna {
+  @extend .jett;
   background-image: url("https://1.bp.blogspot.com/-d1hN7fCqDXM/XyVmzudZEwI/AAAAAAAAApA/uuefRcKJRlsW-lQVlzPP-FzdGReMgPNoQCNcBGAsYHQ/w919/reyna-valorant-uhdpaper.com-4K-5.2439-wp.thumbnail.jpg");
 }
 
 .killjoy {
+  @extend .jett;
   background-image: url("https://preview.redd.it/l8a3nxa1pse51.png?width=3840&format=png&auto=webp&s=6f071a1cd119b400e3b38d8718707676b8316632");
 }
 
 .skye {
+  @extend .jett;
   background-image: url("https://wallpapercave.com/wp/wp7984646.png");
 }
 
 .yoru {
+  @extend .jett;
   background-image: url("../css/yoru.v.png");
 }
 
 .astra {
+  @extend .jett;
   background-image: url("https://i.ytimg.com/vi/1nOEMyVsF0Q/maxresdefault.jpg");
 }
 
 .kayo {
+  @extend .jett;
   background-image: url("https://wallpapercave.com/wp/wp9453078.png");
 }
 
 .chamber {
+  @extend .jett;
   background-image: url("../css/chamber.V.png");
 }
 
 /* modos de juego */
+
 #headerMDJ {
+  @extend #Header;
   background-image: url("https://noticiasvideojuegos.com/wp-content/uploads/2020/05/8-modos-de-juego-que-queremos-que-Riot-agregue-a.jpg");
 }
 
@@ -309,47 +335,62 @@ footer {
   text-decoration: underline;
 }
 
-.tipografia ul li {
-  text-align: start;
-  list-style: circle;
+.tipografia {
+  @extend .textos;
+  ul li {
+    text-align: start;
+    list-style: circle;
+  }
 }
 
 /* contacto */
+
+@mixin formulario(
+  $m: 0px,
+  $p: 0,
+  $b: 0,
+  $ma: margin,
+  $pa: padding,
+  $ba: border
+) {
+  #{$ma}: $m;
+  #{$ba}: $b;
+  #{$pa}: $p;
+}
+
 #main {
-  margin: 0px;
-  border: 0;
-  padding: 50px;
-}
-#main #contacto {
-  border-radius: 25px auto;
-  border: 5px;
-  padding: 10px;
-  display: grid;
-  background-color: #b4b4ff;
-}
-#main #contacto input,
-#main #contacto textarea {
-  margin: none;
-  border: 1px solid black;
-  padding: 5px 10px;
-}
-#main #contacto label {
-  padding: 6px;
+  @include formulario($p: 10px);
+
+  #contacto {
+    @include formulario(25px auto, 10px, 5px, border-radius);
+    display: grid;
+
+    input,
+    textarea {
+      @include formulario(none, 5px 10px, 1px solid black);
+    }
+    label {
+      padding: 6px;
+    }
+
+    background-color: rgb(180, 180, 255);
+  }
 }
 
 .botones {
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-right: 14px;
   margin-left: 14px;
 }
 
-.button,
-.button--limpiar {
+.button {
   margin-top: 5px;
   margin-left: 8px;
   margin-right: 8px;
+
   width: 150px;
   height: 50px;
   background-color: aquamarine;
@@ -361,7 +402,12 @@ footer {
   text-decoration: underline;
 }
 
+.button--limpiar {
+  @extend .button;
+}
+
 /* media */
+
 @media screen and (max-width: 1000px) {
   .row {
     display: flex;
@@ -372,11 +418,13 @@ footer {
     display: none;
   }
 }
+
 @media screen and (min-width: 1000px) {
   .imgresponsive2 {
     display: none;
   }
 }
+
 @media screen and (max-width: 992px) {
   .row {
     display: flex;
@@ -393,8 +441,7 @@ footer {
     align-items: center;
   }
 
-  .hijos,
-  .hijosAgentes {
+  .hijos {
     width: 300px;
     border: gray 1px solid;
     text-align: center;
@@ -402,12 +449,23 @@ footer {
     padding: 5px;
     margin-bottom: 20px;
   }
+
+  .hijosAgentes:hover {
+    .agentes {
+      font-size: 10px;
+    }
+    .agentes--letraChica {
+      font-size: 9px;
+    }
+  }
 }
+
 @media (max-width: 768px) {
   .imgChica {
     width: 300px;
   }
 }
+
 @media screen and (max-width: 650px) {
   .imgChicaA {
     height: 80px;
@@ -417,14 +475,15 @@ footer {
     width: 200px;
   }
 }
+
 @media (max-width: 576px) {
   .imgChica {
     width: 200px;
   }
-
   .tipografia {
     font-size: 13px;
   }
+  .imgChicaM {
+    width: 200px;
+  }
 }
-
-/*# sourceMappingURL=estilos.css.map */
