@@ -186,7 +186,7 @@ footer {
   border: 1px solid black;
   width: 500px;
   height: 500px;
-  margin: 4px;
+  margin: 10px;
 }
 .hijosAgentes .agentes {
   display: none;
@@ -318,7 +318,7 @@ footer {
 #main {
   margin: 0px;
   border: 0;
-  padding: 50px;
+  padding: 10px;
 }
 #main #contacto {
   border-radius: 25px auto;
@@ -402,6 +402,13 @@ footer {
     padding: 5px;
     margin-bottom: 20px;
   }
+
+  .hijosAgentes:hover .agentes {
+    font-size: 10px;
+  }
+  .hijosAgentes:hover .agentes--letraChica {
+    font-size: 9px;
+  }
 }
 @media (max-width: 768px) {
   .imgChica {
@@ -424,6 +431,10 @@ footer {
 
   .tipografia {
     font-size: 13px;
+  }
+
+  .imgChicaM {
+    width: 200px;
   }
 }
 
