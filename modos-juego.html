@@ -10,6 +10,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="./css/VLNT.png" />
     <!-- css -->
     <link rel="stylesheet" href="css/estilos.css" />
     <!-- bs css -->
@@ -26,10 +27,9 @@
     <title>Modos de Juego</title>
   </head>
   <body>
+    <!-- header -->
     <header id="headerMDJ">
       <div class="cabecera" id="flexCabecera">
-        <img src="css/Lriot.png" />
-
         <div>
           <nav class="navbar-expand-sm navbar-light">
             <button
@@ -48,35 +48,43 @@
                   <a class="nav-link" id="nav" href="index.html">Hogar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="nav" href="mapas.html">Mapas</a>
+                  <a class="nav-link" id="nav2" href="mapas.html">Mapas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="nav" href="agentes.html">Agentes</a>
+                  <a class="nav-link" id="nav3" href="agentes.html">Agentes</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="nav" href="modos-juego.html"
+                  <a class="nav-link" id="nav4" href="modos-juego.html"
                     >Modos de Juego</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="nav" href="contacto.html">Contacto</a>
+                  <a class="nav-link" id="nav5" href="contacto.html"
+                    >Contacto</a
+                  >
                 </li>
               </ul>
             </div>
           </nav>
         </div>
+
+        <img src="css/Lriot.png" />
       </div>
     </header>
 
+    <!-- main (modos de juego) -->
     <main>
       <h1 class="titulos">Tus modos de juego!.</h1>
 
-      <div class="container align-items-center">
-        <div class="row">
+      <!-- inicio Modos de juego -->
+      <div class="container">
+        <div class="row align-items-center no-gutters">
+          <!-- competitivo -->
           <div class="col-12 titulosMDJ">
             <h2>Competitivo</h2>
           </div>
 
+          <!-- texto, competitivo -->
           <div class="col-6 tipografia">
             <p>
               La experiencia de Valorant en su modo competitivo. Juega al mejor
@@ -99,14 +107,17 @@
             </ul>
           </div>
 
+          <!-- img-competitivo -->
           <div class="col-6">
             <img src="./assets/modos-de-juego/rangos.v.jpg" class="imgChica" />
           </div>
 
+          <!-- no competitivo -->
           <div class="col-12 titulosMDJ">
             <h2>No Competitivo</h2>
           </div>
 
+          <!-- texto, no competitivo -->
           <div class="col-6 tipografia">
             <p>
               La experiencia de Valorant en su modo no competitivo. Juega al
@@ -121,6 +132,7 @@
             </p>
           </div>
 
+          <!-- img-no competitivo -->
           <div class="col-6">
             <img
               src="./assets/modos-de-juego/no-competitivo.v.webp"
@@ -128,10 +140,12 @@
             />
           </div>
 
+          <!-- fiebre de la spike -->
           <div class="col-12 titulosMDJ">
             <h2>Fiebre de la Spike</h2>
           </div>
 
+          <!-- texto, fiebre de la spike -->
           <div class="col-6 tipografia">
             <p>
               Lejos de la competitividad y el estrés de una partida normal, la
@@ -150,17 +164,20 @@
             </p>
           </div>
 
-          <div class="col-6 margin">
+          <!-- img-fiebre de la spike -->
+          <div class="col-6">
             <img
               src="./assets/modos-de-juego/spike-rush.jpg"
               class="imgChica"
             />
           </div>
 
+          <!-- combate a muerte -->
           <div class="col-12 titulosMDJ">
             <h2>Combate a Muerte</h2>
           </div>
 
+          <!-- texto, combate a muerte -->
           <div class="col-6 tipografia">
             <p>
               La mente es un músculo que necesita ejercitarse tanto como tus
@@ -183,17 +200,20 @@
             </ul>
           </div>
 
-          <div class="col-6 margin">
+          <!-- img-combate a muerte -->
+          <div class="col-6">
             <img
               src="./assets/modos-de-juego/combate-a-muerte.jpg"
               class="imgChica"
             />
           </div>
 
+          <!-- carrera armamentistica -->
           <div class="col-12 titulosMDJ">
             <h2>Carrera Armamentística</h2>
           </div>
 
+          <!-- texto, carrera armamentistica -->
           <div class="col-6 tipografia">
             <p>
               Arrasa y compite en una carrera contra la oposición a través de un
@@ -224,17 +244,20 @@
             </ul>
           </div>
 
-          <div class="col-6 margin">
+          <!-- img-carrera armamentistica -->
+          <div class="col-6">
             <img
               src="./assets/modos-de-juego/carrera-armamentistica.jfif"
               class="imgChica"
             />
           </div>
 
+          <!-- replica -->
           <div class="col-12 titulosMDJ">
             <h2>Réplica</h2>
           </div>
 
+          <!-- texto, replica -->
           <div class="col-6 tipografia">
             <p>
               En el modo Réplica tendrás que llevar al extremo las habilidades
@@ -262,14 +285,16 @@
             </ul>
           </div>
 
-          <div class="col-6 margin">
+          <!-- img-replica -->
+          <div class="col-6">
             <img src="./assets/modos-de-juego/replica.jpg" class="imgChica" />
           </div>
         </div>
       </div>
+      <!-- fin Modos de juego -->
     </main>
 
-    <!-- nav -->
+    <!-- script nav -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

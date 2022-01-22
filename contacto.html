@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,6 +10,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="./css/VLNT.png" />
     <!-- css -->
     <link rel="stylesheet" href="css/estilos.css" />
     <!-- bs css -->
@@ -26,10 +27,9 @@
     <title>Contacto</title>
   </head>
   <body>
+    <!-- header -->
     <header id="Header">
       <div class="cabecera" id="flexCabecera">
-        <img src="css/Lriot.png" />
-
         <div>
           <nav class="navbar-expand-sm navbar-light">
             <button
@@ -48,53 +48,69 @@
                   <a class="nav-link" id="nav" href="index.html">Hogar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="nav" href="mapas.html">Mapas</a>
+                  <a class="nav-link" id="nav2" href="mapas.html">Mapas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="nav" href="agentes.html">Agentes</a>
+                  <a class="nav-link" id="nav3" href="agentes.html">Agentes</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="nav" href="modos-juego.html"
+                  <a class="nav-link" id="nav4" href="modos-juego.html"
                     >Modos de Juego</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="nav" href="contacto.html">Contacto</a>
+                  <a class="nav-link" id="nav5" href="contacto.html"
+                    >Contacto</a
+                  >
                 </li>
               </ul>
             </div>
           </nav>
         </div>
+
+        <img src="css/Lriot.png" />
       </div>
     </header>
 
     <h1 class="titulos">Contactanos!!</h1>
 
+    <!-- main (formulario) -->
     <main id="main">
-      <form action="" id="contacto">
+      <!-- inicio formulario (totalmente funcional) -->
+      <form
+        action="https://formspree.io/f/xknyoknb"
+        method="post"
+        id="contacto"
+      >
         <h2>Contacta con nosotros!.</h2>
 
-        <label for="">Nombre</label>
-        <input type="text" />
+        <!-- label para "nombre" -->
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" />
 
-        <label for="">Apellido</label>
-        <input type="apellido" />
+        <!-- label para "apellido" -->
+        <label for="apellido">Apellido</label>
+        <input type="apellido" name="apellido" />
 
-        <label for="">Ingrese su correo</label>
-        <input type="email" />
+        <!-- label para "mail" -->
+        <label for="mail">Ingrese su correo</label>
+        <input type="email" name="mail" required />
 
-        <label for="">Dejanos un comentario</label>
-        <textarea name="" id="" cols="40" rows="5"></textarea>
+        <!-- label para "comentario" -->
+        <label for="comentario">Dejanos un comentario</label>
+        <input type="text" name="comentario" required />
 
+        <!-- boton de enviar -->
         <div class="botones">
-          <button class="button">Enviar</button>
-
-          <button class="button--limpiar">Limpiar</button>
+          <button class="button">
+            <imput type="submit" value="Enviar formulario">Enviar</imput>
+          </button>
         </div>
       </form>
+      <!-- fin formulario -->
     </main>
 
-    <!-- nav -->
+    <!-- script nav -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

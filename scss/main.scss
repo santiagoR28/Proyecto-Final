@@ -8,17 +8,14 @@
 $tipografia: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
   "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 $texto: 15px;
-$texto-agentes: 14px;
-$texto-responsive: 6px;
 
 /* cabecera */
-
 .cabecera {
   background-color: rgb(0, 0, 0);
   height: 50px;
   padding: 5px;
-  width: 100%;
-  position: fixed;
+  padding-left: 25px;
+  padding-right: 25px;
   top: 0;
   left: 0;
 }
@@ -29,21 +26,26 @@ $texto-responsive: 6px;
   justify-content: space-between;
 }
 
-header div nav a:hover {
-  color: red;
-}
-
-.flexHC {
-  margin-left: 15px;
-  margin-right: 15px;
-  color: white;
-  font-size: 25px;
-}
-
 #nav {
   color: white;
   text-decoration: underline;
   font-size: 20px;
+}
+
+#nav2 {
+  @extend #nav;
+}
+
+#nav3 {
+  @extend #nav;
+}
+
+#nav4 {
+  @extend #nav;
+}
+
+#nav5 {
+  @extend #nav;
 }
 
 #boton-nav {
@@ -51,11 +53,9 @@ header div nav a:hover {
 }
 
 /* header */
-
 #Header {
   height: 700px;
 
-  margin-top: 50px;
   margin-bottom: 10px;
 
   background-image: url("https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Wallpaper-Boys-Dark-Display.jpg");
@@ -65,7 +65,6 @@ header div nav a:hover {
 }
 
 /* section y main index */
-
 .flexSection {
   display: flex;
   flex-direction: column;
@@ -74,8 +73,8 @@ header div nav a:hover {
 }
 
 .margen {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .titulos {
@@ -99,6 +98,7 @@ main h1 {
   font-family: $tipografia;
 }
 
+/* estilos del Flex, main, Index  */
 #padreFlex {
   display: flex;
   flex-direction: row;
@@ -139,6 +139,7 @@ main h1 {
   align-self: center;
 }
 
+/* estilos de "Arsenal" */
 .imgChicaA {
   height: 120px;
 }
@@ -148,7 +149,6 @@ main h1 {
 }
 
 /* footer */
-
 footer {
   display: flex;
   flex-direction: column;
@@ -181,10 +181,12 @@ footer {
 
 .imgChicaM {
   width: 250px;
+  margin-top: 10px;
 }
 
 .nombreMapas {
-  color: rgb(110, 110, 255);
+  color: black;
+  text-decoration: underline red;
   margin-top: 5px;
   text-align: center;
 }
@@ -225,6 +227,11 @@ footer {
   background-image: none;
   background-color: #e5e1dc;
 
+  animation-name: agentes;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+
   .agentes {
     display: block;
     font-size: 14px;
@@ -232,6 +239,21 @@ footer {
   .agentes--letraChica {
     display: block;
     font-size: 12px;
+  }
+}
+
+/* animacion-agentes  */
+@keyframes agentes {
+  0% {
+    color: #e5e1dc;
+  }
+
+  75% {
+    color: black;
+  }
+
+  100% {
+    color: black;
   }
 }
 
@@ -253,67 +275,54 @@ footer {
   @extend .jett;
   background-image: url("https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2021/2/16/bm7cdtb6xdhcibbweehq/valorant-omen");
 }
-
 .Brimstone {
   @extend .jett;
   background-image: url("https://img.redbull.com/images/c_crop,w_3840,h_1920,x_0,y_0,f_auto,q_auto/c_scale,w_1200/redbullcom/2021/6/8/rqvcvtp5w9cxuuv3o6no/valorant-agent-brimstone");
 }
-
 .phoenix {
   @extend .jett;
   background-image: url("https://p4.wallpaperbetter.com/wallpaper/921/75/603/valorant-phoenix-valorant-riot-games-hd-wallpaper-preview.jpg");
 }
-
 .sage {
   @extend .jett;
   background-image: url("https://images7.alphacoders.com/114/1149436.jpg");
 }
-
 .sova {
   @extend .jett;
   background-image: url("https://p4.wallpaperbetter.com/wallpaper/531/112/977/valorant-sova-valorant-hd-wallpaper-preview.jpg");
 }
-
 .viper {
   @extend .jett;
   background-image: url("https://www.esportmaniacos.com/wp-content/uploads/2021/05/VALORANT_Viper_Light-780x470.jpg");
 }
-
 .cypher {
   @extend .jett;
   background-image: url("https://mocah.org/thumbs/344897-Cypher-Valorant-Video-Game.jpg");
 }
-
 .reyna {
   @extend .jett;
   background-image: url("https://1.bp.blogspot.com/-d1hN7fCqDXM/XyVmzudZEwI/AAAAAAAAApA/uuefRcKJRlsW-lQVlzPP-FzdGReMgPNoQCNcBGAsYHQ/w919/reyna-valorant-uhdpaper.com-4K-5.2439-wp.thumbnail.jpg");
 }
-
 .killjoy {
   @extend .jett;
   background-image: url("https://preview.redd.it/l8a3nxa1pse51.png?width=3840&format=png&auto=webp&s=6f071a1cd119b400e3b38d8718707676b8316632");
 }
-
 .skye {
   @extend .jett;
   background-image: url("https://wallpapercave.com/wp/wp7984646.png");
 }
-
 .yoru {
   @extend .jett;
   background-image: url("../css/yoru.v.png");
 }
-
 .astra {
   @extend .jett;
   background-image: url("https://i.ytimg.com/vi/1nOEMyVsF0Q/maxresdefault.jpg");
 }
-
 .kayo {
   @extend .jett;
   background-image: url("https://wallpapercave.com/wp/wp9453078.png");
 }
-
 .chamber {
   @extend .jett;
   background-image: url("../css/chamber.V.png");
@@ -365,15 +374,14 @@ footer {
     @include formulario(25px auto, 10px, 5px, border-radius);
     display: grid;
 
-    input,
-    textarea {
+    input {
       @include formulario(none, 5px 10px, 1px solid black);
     }
     label {
       padding: 6px;
     }
 
-    background-color: rgb(180, 180, 255);
+    background-color: rgb(255, 205, 205);
   }
 }
 
@@ -381,32 +389,23 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-right: 14px;
-  margin-left: 14px;
 }
 
 .button {
   margin-top: 5px;
-  margin-left: 8px;
-  margin-right: 8px;
 
   width: 150px;
   height: 50px;
-  background-color: aquamarine;
+  background-color: rgb(255, 0, 0);
   text-align: center;
   font-size: 22px;
   font-family: cursive;
-  color: black;
+  color: white;
   border-radius: 20px;
   text-decoration: underline;
 }
 
-.button--limpiar {
-  @extend .button;
-}
-
-/* media */
+/* medias */
 
 @media screen and (max-width: 1000px) {
   .row {
@@ -426,6 +425,10 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
+  #Header {
+    height: 500px;
+  }
+
   .row {
     display: flex;
     flex-direction: column;
@@ -458,21 +461,32 @@ footer {
       font-size: 9px;
     }
   }
+
+  .imgChica {
+    width: 400px;
+  }
 }
 
 @media (max-width: 768px) {
+  #Header {
+    height: 400px;
+  }
   .imgChica {
     width: 300px;
+  }
+  .margen {
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
 @media screen and (max-width: 650px) {
   .imgChicaA {
-    height: 80px;
+    height: 70px;
   }
 
   .imgChicaEF {
-    width: 200px;
+    width: 160px;
   }
 }
 
@@ -484,6 +498,6 @@ footer {
     font-size: 13px;
   }
   .imgChicaM {
-    width: 200px;
+    width: 160px;
   }
 }
